@@ -22,10 +22,16 @@ body {
 header {
   width: 100%;
   padding: 0.5rem 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: #5D6B48;
+  display: flex;
+  justify-content: center;
+}
+
+.header-content {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo-div {
@@ -36,6 +42,7 @@ header {
 
 header img {
   height: 10rem;
+  margin-left: -55px;
 }
 
 .logo-div a {
@@ -67,15 +74,13 @@ h2, p {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  margin: 5rem 0 3rem 0;
 }
 
 .hero a {
   background-color: #42323D;
   color: white;
   padding: 1rem 3rem;
-  border: none;
-  margin: 2rem 0;
   cursor: pointer;
   text-decoration: none;
   position: absolute;
@@ -83,23 +88,93 @@ h2, p {
   left: 45%;
 }
 
+.hero a:hover, footer input[type=submit]:hover  {
+  background-color: #584452;
+  font-family: Aribau-medium;
+}
+
 .hero > img {
   max-width: 90%;
 }
 
-main {
-  max-width: 600px;
+main, .main {
   margin-bottom: 5rem;
+  width: 90%;
 }
 
-main > div {
-  margin-bottom: 2.5rem;
+.text-box {
+  margin-bottom: 5rem;
+  max-width: 600px;
 }
 
-main > div > p {
+main > div > p, .main > div > p {
   margin-top: 0.5rem;
 }
 
- a:visited {
+a:visited {
   color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 3rem;
+  row-gap: 2rem;
+}
+
+.grid img {
+  max-width: 250px;
+}
+
+.grid h3 {
+  color: black;
+  padding: 1rem 0 0 0;
+}
+
+#slideshow { 
+  margin: 3rem 0;
+  position: relative; 
+  width: 100%; 
+  height: 700px; 
+  /* box-shadow: 0 0 20px rgba(0,0,0,0.4);  */
+}
+
+#slideshow img {
+  width: 100%;
+  height: 700px;
+  position: absolute; 
+}
+
+footer {
+  background-color: #23241D;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer div {
+  padding: 4rem;
+}
+
+footer h2 {
+  padding: 1rem 0;
+}
+
+footer form {
+  display: flex;
+  flex-direction: column;
+}
+
+footer input[type=email] {
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+}
+
+footer input[type=submit] {
+  background-color: #42323D;
+  color: white;
+  padding: 0.6rem 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
 }
